@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varibles and Loops</title>
+</head>
+<body>
+    <script>
+    let professorName = prompt("Who are the lines for:");
+    let lineToWrite = prompt("Enter the line to write (e.g., 'I must not tell lies'):");
+    let numberOfLines = prompt("Enter the number of times the lines should be written:");
+
+numberOfLines = parseInt(numberOfLines);
+
+
+if (!isNaN(numberOfLines) && numberOfLines > 0) {
+
+  // Use a for loop to write the lines to the console
+  for (let line = 1; line <= numberOfLines; line++) {
+    console.log(`${line}: ${lineToWrite}`);
+  }
+  document.body.innerHTML += `<p>${professorName} has punished Harry with the following lines:</p>`;
+
+} else {
+  document.body.innerHTML += "<p>Invalid input. Please enter a valid number of times.</p>";
+}
+  
+    </script>
+</body>
+</html>
